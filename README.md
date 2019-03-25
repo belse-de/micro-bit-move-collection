@@ -1,2 +1,4 @@
-# micro-bit-move-
-bcc micro:bit + kitware :move (micro:bit:move) collection of small programms
+# micro-bit-move-collection
+A collection of programs for the BBC micro:bit + kitware :move (micro:bit:move).
+-----
+
