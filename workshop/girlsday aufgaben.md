@@ -29,7 +29,7 @@ Nach einer Weile(zum Beispiel 200ms) soll wieder das erste Symbol angeseigen
 Diese soll sich dauerhaft wiederholen.
 
 #### Anmerkung
-- 200ms sind eine schreibweise fuer 200 Milisekunden.
+- 200ms sind eine schreibweise für 200 Milisekunden.
 - 1000 Milisekunden sind eine Sekunde.
 
 ## Zusätlich Benötigte Blöcke:
