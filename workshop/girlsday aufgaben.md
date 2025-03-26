@@ -13,13 +13,7 @@ Das Symbol kannst du frei waehlen.
 - Grundlagen/beim Start
 - Grundlagen/zeige Symbol
 
-## Lösungsbeispiel(JS):
-```javascript
-basic.showIcon(IconNames.Heart)
-basic.forever(function () {
-
-})
-```
+---
 
 # 2. Zeitschleife - Ein schlagendes Herz
 
@@ -42,16 +36,7 @@ Diese soll sich dauerhaft wiederholen.
 - Grundlagen/dauerhaft
 - Grundlagen/pausieren (ms)
 
-
-## Lösungsbeispiel(JS):
-```javascript
-basic.forever(function () {
-    basic.showIcon(IconNames.Heart)
-    basic.pause(200)
-    basic.showIcon(IconNames.SmallHeart)
-    basic.pause(200)
-})
-```
+---
 
 # 3. NeoPixel - Es werde bunt
 ## Aufgabe:
@@ -72,29 +57,9 @@ Sie sollen abwechseln an und aus gehen, also blinken.
 - NeoPixel/(strip) ausschalten
 - mehr/(strip) setze Farbe von NeoPixel (0) auf (rot)
 
+---
 
-## Lösungsbeispiel(JS):
-```javascript
-// Initialisierung des Neopixel LED-Streifens im
-// RGB-Modus mit 5 LEDs
-let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
-basic.forever(function () {
-    // rechte LED
-    strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-    // linke LED
-    strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Blue))
-    // Zeige die Veränderungen auf dem LED-Streifen an
-    strip.show()
-    basic.pause(200)
-    strip.clear()
-    // Zeige die Veränderungen auf dem LED-Streifen an
-    strip.show()
-    basic.pause(200)
-})
-
-
-```
-# Input - Buttons -> LED
+# 4. Input - Buttons -> NeoPixel
 ## Aufgabe:
 - Wenn der linke Knopf gedrückt wird soll die linke LED leuchten
 - Wenn der rechte Knopf gedrückt wird soll die rechte LED leuchten
@@ -114,28 +79,6 @@ basic.forever(function () {
 - Logik/wenn (wahr) dann
 - Eingabe/Knopf (A) ist geklickt
 
-## Lösungsbeispiel(JS):
-```javascript
-// Initialisierung des Neopixel LED-Streifens im
-// RGB-Modus mit 5 LEDs
-let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
-basic.forever(function () {
-    strip.clear()
-    if (input.buttonIsPressed(Button.AB)) {
-        // mittlere LED
-        strip.setPixelColor(2, neopixel.colors(NeoPixelColors.Violet))
-    } else if (input.buttonIsPressed(Button.A)) {
-        // rechte LED
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-    } else if (input.buttonIsPressed(Button.B)) {
-        // linke LED
-        strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Blue))
-    }
-    // Zeige die Veränderungen auf dem LED-Streifen an
-    strip.show()
-})
-```
-
 ---
 
 Vonhieran ist der Simulator nicht mehr ausreichend.
@@ -143,7 +86,7 @@ Wir müssen es auf dem Roboter austesten.
 
 ---
 
-# Input - Lichtsensor -> LED
+# 5. Input - Lichtsensor -> NeoPixel
 ## Aufgabe:
 Erweiter das vorherige Programm, so dass statt der Knöpfe die Lichtsensoren des Roboters verwendet werden.
 Versuche die "Knopf (A) ist geklickt", "Knopf (B) ist geklickt" und "Knopf (A + B) ist geklickt" durch passende Blöcke mit l_sensor und r_sensor zu ersätzen.
@@ -186,74 +129,19 @@ basic.forever(function () {
     l_sensor = pins.digitalReadPin(DigitalPin.P16)
     // Wenn der rechte Liniensensor Weiß sieht schalte die
     // rechte LED auf Rot
-    //
-    // ansonsten schalte sie auf schwarz(aus)
     if (l_sensor == 0 && r_sensor == 1) {
         strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
     }
-
-
     // Das vorherige Programm
-    strip.clear()
-    if (input.buttonIsPressed(Button.AB)) {
-        // mittlere LED
-        strip.setPixelColor(2, neopixel.colors(NeoPixelColors.Violet))
-    } else if (input.buttonIsPressed(Button.A)) {
-        // rechte LED
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-    } else if (input.buttonIsPressed(Button.B)) {
-        // linke LED
-        strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Blue))
-    }
-    // Zeige die Veränderungen auf dem LED-Streifen an
-    strip.show()
+    //
+    // [...]
+    //
 })
 ```
 
-## Lösungsbeispiel(JS):
-```javascript
-let l_sensor = 0
-let r_sensor = 0
-// Initialisierung des rechten Liniensensors
-pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
-// Initialisierung des linken Liniensensors
-pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
-// Initialisierung des Neopixel LED-Streifens im
-// RGB-Modus mit 5 LEDs
-let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
-basic.forever(function () {
-    strip.clear()
-    // Speichert den momentanen Wert des Liniensensors in
-    // der Variable: "r_sensor"
-    //
-    // Ließt den momentanen Wert des rechten Liniensensors
-    // ein
-    r_sensor = pins.digitalReadPin(DigitalPin.P15)
-    // Speichert den momentanen Wert des Liniensensors in
-    // der Variable: "l_sensor"
-    //
-    // Ließt den momentanen Wert des rechten Liniensensors
-    // ein
-    l_sensor = pins.digitalReadPin(DigitalPin.P16)
-    if (l_sensor == 1 && r_sensor == 1) {
-        // mittlere LED
-        strip.setPixelColor(2, neopixel.colors(NeoPixelColors.Violet))
-    } else if (l_sensor == 0 && r_sensor == 1) {
-        // rechte LED
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-    } else if (l_sensor == 1 && r_sensor == 0) {
-        // linke LED
-        strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Blue))
-    } else {
+---
 
-    }
-    // Zeige die Veränderungen auf dem LED-Streifen an
-    strip.show()
-})
-```
-
-
-# output - Lichtsensor -> Motor
+# 6. Output - Lichtsensor -> Motor
 ## Aufgabe:
 Erweiter das vorherige Programm, so dass der Roboter der schwarzen Linie folgen kann.
 Dafür musst du aus Servo:Lite die Blöcke für
@@ -271,48 +159,8 @@ Vorwärts(drive forward), Links(turn left) Rechts(turn right) und Stop(stop) an 
 - Servo:Lite/turn right
 - Servo:Lite/stop
 
-## Lösungsbeispiel(JS):
+---
 
-```javascript
-let l_sensor = 0
-let r_sensor = 0
-// Initialisierung des rechten Liniensensors
-pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
-// Initialisierung des linken Liniensensors
-pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
-// Initialisierung des Neopixel LED-Streifens im
-// RGB-Modus mit 5 LEDs
-let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
-basic.forever(function () {
-    strip.clear()
-    // Speichert den momentanen Wert des Liniensensors in
-    // der Variable: "r_sensor"
-    //
-    // Ließt den momentanen Wert des rechten Liniensensors
-    // ein
-    r_sensor = pins.digitalReadPin(DigitalPin.P15)
-    // Speichert den momentanen Wert des Liniensensors in
-    // der Variable: "l_sensor"
-    //
-    // Ließt den momentanen Wert des rechten Liniensensors
-    // ein
-    l_sensor = pins.digitalReadPin(DigitalPin.P16)
-    if (l_sensor == 1 && r_sensor == 1) {
-        // mittlere LED
-        strip.setPixelColor(2, neopixel.colors(NeoPixelColors.Violet))
-        kitronik_servo_lite.forward()
-    } else if (l_sensor == 0 && r_sensor == 1) {
-        // rechte LED
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-        kitronik_servo_lite.left()
-    } else if (l_sensor == 1 && r_sensor == 0) {
-        // linke LED
-        strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Blue))
-        kitronik_servo_lite.right()
-    } else {
-        kitronik_servo_lite.stop()
-    }
-    // Zeige die Veränderungen auf dem LED-Streifen an
-    strip.show()
-})
-```
+Herzlichen Glückwunsch!
+
+Wenn du die Aufgaben bis hier hin alle gemeistert hast sollte dein Roboter nun ohne Probleme einer schwarzen Line folgen können.
