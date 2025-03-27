@@ -1,13 +1,11 @@
-
-
 # 1. Start - Hallo
 
 ## Aufgabe:
-Zeigen ein Symbol nach dem Einschalten an
+Zeige ein Symbol nach dem Einschalten an.
 
 ### Beschreibung:
-Nach dem einschalten des Roboters soll ein Sybol angezeigt werden.
-Das Symbol kannst du frei waehlen.
+Nach dem Einschalten des Roboters sollte ein Symbol angezeigt werden.
+Du kannst das Symbol frei wählen.
 
 ## Benötigte Blöcke:
 - Grundlagen/beim Start
@@ -18,21 +16,20 @@ Das Symbol kannst du frei waehlen.
 # 2. Zeitschleife - Ein schlagendes Herz
 
 ## Aufgabe:
-Zeigen zwei Symbol nach dem Einschalten an,
-die abwechseln.
+Zeige zwei Symbole nach dem Einschalten an, die sich abwechseln.
 
 ### Beschreibung:
-Nach dem einschalten des Roboters soll ein Sybol(zum Beispiel: groszes Herz) angezeigt werden.
-Nach einer Weile(zum Beispiel 200ms) soll ein anderers Symbol(zum Beispiel: kleines Herz) angeseigen
-Nach einer Weile(zum Beispiel 200ms) soll wieder das erste Symbol angeseigen
+Nach dem Einschalten des Roboters soll ein Sybol(zum Beispiel: großes Herz) angezeigt werden.
+Nach einer Weile(zum Beispiel nach 200ms) soll ein anderes Symbol(zum Beispiel: kleines Herz) angezeigt werden.
+Nach einer Weile(zum Beispiel nach 200ms) soll wieder das erste Symbol angezeigt werden.
 
-Diese soll sich dauerhaft wiederholen.
+Dies soll sich dauerhaft wiederholen.
 
 #### Anmerkung
-- 200ms sind eine schreibweise für 200 Milisekunden.
-- 1000 Milisekunden sind eine Sekunde.
+- 200ms ist eine Schreibweise für 200 Millisekunden.
+- 1000 Millisekunden sind eine Sekunde.
 
-## Zusätlich Benötigte Blöcke:
+## Zusätzlich Benötigte Blöcke:
 - Grundlagen/dauerhaft
 - Grundlagen/pausieren (ms)
 
@@ -40,70 +37,67 @@ Diese soll sich dauerhaft wiederholen.
 
 # 3. NeoPixel - Es werde bunt
 ## Aufgabe:
-Zeigen zwei verschiede Farben auf der LED leiste oben an.
+Zeige zwei verschiedene Farben auf der LED-Leiste oben an.
 Sie sollen abwechseln an und aus gehen, also blinken.
 
 ### Beschreibung:
-- die linke LED soll blau leuchten
-- die rechte LED soll rot leuchten
-- die mittlere LED soll lila/violet leuchten
+- Die linke LED soll blau leuchten
+- Die rechte LED soll rot leuchten
+- Die mittlere LED soll lila/violet leuchten
 
 #### Anmerkung
-- In den "beim Start" Block "NeoPixel/setze strip auf NeoPixel mit **5** Pixeln und Modus RGB (GRB Format)" einfügen
-- Dies ist Schritt erzählt dem Programm wie es mit den LEDs sprechen soll und wie viele existiern
+- Füge im "beim Start" Block "NeoPixel/setze strip auf NeoPixel mit **5** Pixeln und Modus RGB (GRB Format)" ein.
+- Dieser Schritt sagt dem Programm, wie es mit den LED-Leiste kommunizieren soll und wie viele LEDs existieren.
+- LED = Light Emitting Diode (Licht abstrahlende Diode)
 
-## Zusätlich Benötigte Blöcke:
+## Zusätzlich Benötigte Blöcke:
 - NeoPixel/(strip) anzeigen
 - NeoPixel/(strip) ausschalten
 - mehr/(strip) setze Farbe von NeoPixel (0) auf (rot)
 
 ---
 
-# 4. Input - Buttons -> NeoPixel
+# 4. Input - Knöpfe -> NeoPixel
 ## Aufgabe:
-- Wenn der linke Knopf gedrückt wird soll die linke LED leuchten
-- Wenn der rechte Knopf gedrückt wird soll die rechte LED leuchten
-- Wenn beide Knöpfe gedrückt werden soll die mittlere LED leuchten
-- Wenn kein Knopf gedrückt wird soll keine LED leuchten
+- Wenn der linke Knopf gedrückt wird, soll die linke LED leuchten.
+- Wenn der rechte Knopf gedrückt wird, soll die rechte LED leuchten.
+- Wenn beide Knöpfe gedrückt werden, soll die mittlere LED leuchten.
+- Wenn kein Knopf gedrückt wird, soll keine LED leuchten.
 
 ### Beschreibung:
-- die linke LED soll blau leuchten
-- die rechte LED soll rot leuchten
-- die mittlere LED soll lila/violet leuchten
+- Die linke LED soll blau leuchten.
+- Die rechte LED soll rot leuchten.
+- Die mittlere LED soll lila/violett leuchten.
 
-#### Anmerkung
-- In den "beim Start" Block "NeoPixel/setze strip auf NeoPixel mit **5** Pixeln und Modus RGB (GRB Format)" einfügen
-- Dies ist Schritt erzählt dem Programm wie es mit den LEDs sprechen soll und wie viele existiern
-
-## Zusätlich Benötigte Blöcke:
+## Zusätzlich Benötigte Blöcke:
 - Logik/wenn (wahr) dann
 - Eingabe/Knopf (A) ist geklickt
 
 ---
 
-Vonhieran ist der Simulator nicht mehr ausreichend.
-Wir müssen es auf dem Roboter austesten.
+Von hier an ist der Simulator nicht mehr ausreichend.
+Wir müssen die Programme mit dem Roboter ausprobieren.
 
 ---
 
 # 5. Input - Lichtsensor -> NeoPixel
 ## Aufgabe:
 Erweiter das vorherige Programm, so dass statt der Knöpfe die Lichtsensoren des Roboters verwendet werden.
-Versuche die "Knopf (A) ist geklickt", "Knopf (B) ist geklickt" und "Knopf (A + B) ist geklickt" durch passende Blöcke mit l_sensor und r_sensor zu ersätzen.
+Versuche die Blöcke "Knopf (A) ist geklickt", "Knopf (B) ist geklickt" und "Knopf (A + B) ist geklickt" durch passende Blöcke mit l_sensor und r_sensor zu ersetzen.
 
-Lass dir bitte von deinem Betreuer die nötigen Blöcke einfügen.
+Bitte lass dir von einem Betreuer helfen, die benötigen Blöcke eizufügen.
 
 #### Anmerkung
-- In den "beim Start" Block "Fortgeschritten/Pins/mehr/ziehe den Pin **P15** auf nach oben" einfügen
-- In den "beim Start" Block "Fortgeschritten/Pins/mehr/ziehe den Pin **P16** auf nach oben" einfügen
-- Dies ist Schritt erzählt dem Programm wie es mit den Lichtsensoren sprechen soll und wie viele existiern
+- In den "beim Start" Block "Fortgeschritten/Pins/mehr/ziehe den Pin **P15** auf nach oben" einfügen.
+- In den "beim Start" Block "Fortgeschritten/Pins/mehr/ziehe den Pin **P16** auf nach oben" einfügen.
+- Dieser Schritt sagt dem Programm, wie es mit den Lichtsensoren kommunizieren soll.
 
-## Zusätlich Benötigte Blöcke:
+## Zusätzlich Benötigte Blöcke:
 - Fortgeschritten/Pins/mehr/ziehe den Pin (P0) auf (nach oben)
 - Fortgeschritten/Pins/digitale Werte von Pin (P0)
 - Variablen/ändere (variable) auf (0)
 
-## Startpunkt(JS):
+## Startpunkt (JS):
 ```javascript
 let l_sensor = 0
 let r_sensor = 0
@@ -118,16 +112,16 @@ basic.forever(function () {
     // Speichert den momentanen Wert des Liniensensors in
     // der Variable: "r_sensor"
     //
-    // Ließt den momentanen Wert des rechten Liniensensors
+    // Liest den momentanen Wert des rechten Liniensensors
     // ein
     r_sensor = pins.digitalReadPin(DigitalPin.P15)
     // Speichert den momentanen Wert des Liniensensors in
     // der Variable: "l_sensor"
     //
-    // Ließt den momentanen Wert des rechten Liniensensors
+    // Liest den momentanen Wert des linken Liniensensors
     // ein
     l_sensor = pins.digitalReadPin(DigitalPin.P16)
-    // Wenn der rechte Liniensensor Weiß sieht schalte die
+    // Wenn der rechte Liniensensor Weiß sieht, schalte die
     // rechte LED auf Rot
     if (l_sensor == 0 && r_sensor == 1) {
         strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
@@ -153,7 +147,7 @@ Vorwärts(drive forward), Links(turn left) Rechts(turn right) und Stop(stop) an 
 - Was "sehen" die Sensoren wenn der Roboter gedreht auf der Linie steht?
 - In welche Richtung muss der Roboter fahren wenn er mittig, gedreht oder senkrecht auf der Line steht?
 
-## Zusätlich Benötigte Blöcke:
+## Zusätzlich Benötigte Blöcke:
 - Servo:Lite/drive forward
 - Servo:Lite/turn left
 - Servo:Lite/turn right
