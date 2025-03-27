@@ -55,7 +55,7 @@ Display two different colors on the LED strip at the top. They should alternate 
 
 ---
 
-# 4. Input - Buttons -> NeoPixel
+# 4. Input - Buttons
 ## Task:
 - When the left button is pressed, the left LED should light up.
 - When the right button is pressed, the right LED should light up.
@@ -77,7 +77,7 @@ From here on, the simulator is no longer sufficient. We need to test the program
 
 ---
 
-# 5. Input - Light Sensor -> NeoPixel
+# 5. Input - Light Sensor
 ## Task:
 Extend the previous program so that instead of buttons, the robot's light sensors are used. Try to replace "button (A) is clicked", "button (B) is clicked", and "button (A + B) is clicked" with appropriate blocks using l_sensor and r_sensor.
 
@@ -129,7 +129,7 @@ basic.forever(function () {
 
 ---
 
-# 6. Output - Light Sensor -> Motor
+# 6. Output - Motor
 ## Task:
 Extend the previous program so that the robot can follow the black line. For this, you need to insert the blocks for Forward (drive forward), Left (turn left), Right (turn right), and Stop (stop) from Servo:Lite into the correct places in your program.
 

@@ -57,7 +57,7 @@ Sie sollen abwechseln an und aus gehen, also blinken.
 
 ---
 
-# 4. Input - Knöpfe -> NeoPixel
+# 4. Input - Knöpfe
 ## Aufgabe:
 - Wenn der linke Knopf gedrückt wird, soll die linke LED leuchten.
 - Wenn der rechte Knopf gedrückt wird, soll die rechte LED leuchten.
@@ -80,7 +80,7 @@ Wir müssen die Programme mit dem Roboter ausprobieren.
 
 ---
 
-# 5. Input - Lichtsensor -> NeoPixel
+# 5. Input - Lichtsensor
 ## Aufgabe:
 Erweiter das vorherige Programm, so dass statt der Knöpfe die Lichtsensoren des Roboters verwendet werden.
 Versuche die Blöcke "Knopf (A) ist geklickt", "Knopf (B) ist geklickt" und "Knopf (A + B) ist geklickt" durch passende Blöcke mit l_sensor und r_sensor zu ersetzen.
@@ -135,7 +135,7 @@ basic.forever(function () {
 
 ---
 
-# 6. Output - Lichtsensor -> Motor
+# 6. Output - Motor
 ## Aufgabe:
 Erweiter das vorherige Programm, so dass der Roboter der schwarzen Linie folgen kann.
 Dafür musst du aus Servo:Lite die Blöcke für
