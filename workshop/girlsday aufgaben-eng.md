@@ -3,7 +3,7 @@ Here's the translated text from German to English(by gpt-4o-mini):
 # 1. Start - Hello
 
 ## Task:
-Display a symbol upon startup
+Display a symbol upon startup.
 
 ### Description:
 After turning on the robot, a symbol should be displayed. You can choose the symbol freely.
@@ -20,7 +20,7 @@ After turning on the robot, a symbol should be displayed. You can choose the sym
 Display two symbols upon startup that alternate.
 
 ### Description:
-After turning on the robot, a symbol (for example: large heart) should be displayed. After a while (for example, 200ms), another symbol (for example: small heart) should be displayed. After a while (for example, 200ms), the first symbol should be displayed again.
+After turning on the robot, a symbol (for example: large heart) should be displayed. After a while (for example, after 200ms), another symbol (for example: small heart) should be displayed. After a while (for example, after 200ms), the first symbol should be displayed again.
 
 This should repeat indefinitely.
 
@@ -45,7 +45,8 @@ Display two different colors on the LED strip at the top. They should alternate 
 
 #### Note
 - In the "at startup" block, insert "NeoPixel/set strip to NeoPixel with **5** pixels and mode RGB (GRB format)".
-- This step tells the program how to communicate with the LEDs and how many exist.
+- This step tells the program how to communicate with the LED strip and how many LEDs exist.
+- LED = Light Emitting Diode
 
 ## Additionally Required Blocks:
 - NeoPixel/(strip) display
@@ -66,17 +67,13 @@ Display two different colors on the LED strip at the top. They should alternate 
 - The right LED should glow red.
 - The middle LED should glow purple/violet.
 
-#### Note
-- In the "at startup" block, insert "NeoPixel/set strip to NeoPixel with **5** pixels and mode RGB (GRB format)".
-- This step tells the program how to communicate with the LEDs and how many exist.
-
 ## Additionally Required Blocks:
 - Logic/if (true) then
 - Input/button (A) is clicked
 
 ---
 
-From here on, the simulator is no longer sufficient. We need to test it on the robot.
+From here on, the simulator is no longer sufficient. We need to test the programs with the robot.
 
 ---
 
@@ -84,12 +81,12 @@ From here on, the simulator is no longer sufficient. We need to test it on the r
 ## Task:
 Extend the previous program so that instead of buttons, the robot's light sensors are used. Try to replace "button (A) is clicked", "button (B) is clicked", and "button (A + B) is clicked" with appropriate blocks using l_sensor and r_sensor.
 
-Please ask your supervisor to insert the necessary blocks.
+Please ask a supervisor to insert the necessary blocks.
 
 #### Note
 - In the "at startup" block, insert "Advanced/Pins/more/pull pin **P15** up".
 - In the "at startup" block, insert "Advanced/Pins/more/pull pin **P16** up".
-- This step tells the program how to communicate with the light sensors and how many exist.
+- This step tells the program how to communicate with the light sensors.
 
 ## Additionally Required Blocks:
 - Advanced/Pins/more/pull pin (P0) up
