@@ -36,7 +36,7 @@ This should repeat indefinitely.
 
 # 3. NeoPixel - Let There Be Color
 ## Task:
-Display two different colors on the LED strip above. They should alternate on and off, i.e., blink.
+Display two different colors on the LED strip at the top. They should alternate on and off, i.e., blink.
 
 ### Description:
 - The left LED should glow blue.
